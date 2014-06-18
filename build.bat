@@ -25,7 +25,12 @@ copy /Y PNGEncoder2.swc slim\PNGEncoder2_good.swc >nul
 haxe PNGEncoder2.hxml -D GOOD_ONLY -D DECODER
 copy /Y PNGEncoder2.swc slim\PNGEncoder2_good_with_decoder.swc >nul
 
+echo Building GOOD + decoder slim version...
+haxe PNGEncoder2.hxml -D GOOD_ONLY -D DECODER
+copy /Y PNGEncoder2.swc slim\PNGEncoder2_good_decoder.swc >nul
+
 echo Building full version...
 haxe PNGEncoder2.hxml -D DECODER
+
 
 rem pause
